@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 /*QUERY SIZE
 Small
@@ -60,7 +60,7 @@ form.form-inline input.form-control {
 /*SECTION*/
 
 .main-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/resources/gambar/martin-brosy-758535-unsplash.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../gambar/martin-brosy-758535-unsplash.jpg");
     height: 70%;
     width: 100%;
     background-position: center;
@@ -94,7 +94,7 @@ form.form-inline input.form-control {
     box-shadow: 7px 7px #292929;
     text-align: center;
     margin: 4.5rem auto;
-    height: 76%;
+    height: 75%;
     width: 50%;
     border-radius: 7%;
 }
@@ -110,7 +110,7 @@ form.form-inline input.form-control {
 }
 
 .label-form{
-    font-family: 'gotham', serif;
+    font-family: 'gotham', 'serif';
     font-weight: bolder;
     font-size: 1.4rem;
     float: left;
@@ -123,6 +123,19 @@ input[type=text], input[type=email]{
 }
 
 /*END OF FORM-COVER*/
+
+/*SECTION 2*/
+
+#sec2{
+    background-color: #6565c9;
+}
+
+section#sec2 h1#ht{
+    font-weight: bolder;
+/*    font-size: 100rem;*/
+}
+
+/*END OF SECTION 2*/
 
 /*END OF SECTION*/
 
@@ -139,7 +152,7 @@ footer {
     bottom:0;
     width:100%;
     height:38vh;
-    background-image: url(/resources/gambar/background-motive.jpg);
+    background-image: url("../gambar/background-motive.jpg");
     background-position: right;
     margin: 0 auto;
     padding: 3vh;
@@ -179,11 +192,11 @@ footer .row .col .logo{
 }
 
 .gambar{
-    background-image: url(/resources/gambar/LogoSSMFix.png);
+    background-image: url("../gambar/LogoSSMFix.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 50%;
+    height: 10rem;
     width: 90%;
     position: absolute;
     top: 50%;

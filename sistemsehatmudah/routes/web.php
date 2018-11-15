@@ -23,10 +23,4 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
-Route::get('/app', function(){
-    return view('layouts/app');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('posts', 'PostController');

@@ -3,15 +3,14 @@
     <title>
         Sistem Sehat Mudah
     </title>
-    <link type="text/css" rel="stylesheet" href="/public/css/app.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/home.css">
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/home.css') }}">
 </head>
-
 <body>
     <!--    NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="margin: 2vh">
         <div class="col">
-            <a href="/"> <img class="img-fluid" src="/resources/gambar/LogoSSMFix.png" width="100vh">
+            <a href="/"> <img class="img-fluid" src="{{ URL::asset('gambar/LogoSSMFix.png') }}" width="100vh">
                 <span>Sistem Sehat Mudah</span>
             </a>
         </div>
@@ -57,10 +56,10 @@
         </div>
     </footer>
     <!--    END OF FOOTER-->
-    <script src="/public/js/jquery3-3-1.js"></script>
+    <script src="{{ URL::asset('js/jquery3-3-1.js') }}"></script>
     <script>
         $(window).ready(function() {
-//            alert("tomete");
+        //    alert("tomete");
         });
 
     </script>
