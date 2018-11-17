@@ -1,4 +1,4 @@
-@extends('layouts.baseTemplate')
+@extends('layouts.baseTamplate')
 @section('content')
 <!--    CONTENT-->
 
@@ -41,34 +41,7 @@
 {{-- END OF SECTION 1 --}}
 
 {{-- SECTION 2 --}}
-    <section id="sec2">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="container-fluid">
-                    <h1 id="ht">Hot Thread</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @if (count($thread) > 0)
-                @foreach ($thread as $item)
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="container-fluid">
-                <h1>{{$thread->namaDokter}}</h1>
-                    </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="container-fluid">
-                <h1>{{$thread->username}}</h1>
-                <h2>{{$thread->password}}</h2>
-                </div>
-            </div>
-                @endforeach
-            @else
-                <p>gagal coy</p>
-            @endif   
-        </div>
-    </section>
+  
 </body>
 {{-- END OF SECTION 2 --}}
 
