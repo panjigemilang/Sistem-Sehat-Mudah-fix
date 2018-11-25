@@ -23,4 +23,8 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
+Route::get('/profile', function(){
+    return view('pages/profile');
+});
+
 Route::resource('posts', 'PostController');

@@ -15,8 +15,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        return Schema::getColumnListing('namaDokter');
-        // return view('pages.home')->with('thread', $thread);
+        $thread = Post::all()->take(1);
+        return view('pages.home')->with('thread', $thread);
     }
 
     /**

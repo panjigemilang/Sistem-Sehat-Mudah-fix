@@ -1,0 +1,11 @@
+  @if (count($thread) > 0)
+                @foreach ($thread as $item) 
+                                    <h1>{{$item->judulThread}}</h1>
+                                    
+                    <h1>{{$item->deskripsiThread}}</h1>
+                    <h2>{{$item->kategori}}</h2>
+                    
+                @endforeach
+            @else
+                <p>gagal coy</p>
+            @endif 

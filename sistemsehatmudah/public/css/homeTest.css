@@ -161,6 +161,12 @@ section#sec2 h1#ht {
     bottom: 0;
 }
 
+.desc {}
+
+.cat {
+    /*    float: right;*/
+}
+
 .cat h4 {
     position: absolute;
     bottom: 0;

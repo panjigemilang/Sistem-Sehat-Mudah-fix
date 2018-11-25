@@ -40,14 +40,9 @@
    @yield('content')
 
     <!--    FOOTER-->
-    <footer>
+    
+<footer>
         <div class="row">
-            <div class="item1 col">
-                <span>About us</span>
-            </div>
-            <div class="item2 col">
-                <span>Services</span>
-            </div>
             <div class="item3 col outer">
                 <div class="gambar">
                     <div class="logo">Sistem Sehat Mudah</div>
