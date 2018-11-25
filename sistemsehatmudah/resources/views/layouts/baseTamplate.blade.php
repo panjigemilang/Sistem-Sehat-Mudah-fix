@@ -20,8 +20,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0 col">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" size="44vh">
+            <form class="form-inline my-2 my-lg-0 col" method="get" action="search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" size="44vh" name="keyword">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 

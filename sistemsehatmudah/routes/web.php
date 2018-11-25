@@ -23,4 +23,8 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
+Route::get('/search', 'PostController@search');
+
+Route::get('/search={idThread}', 'PostController@searchDetail');
+
 Route::resource('posts', 'PostController');

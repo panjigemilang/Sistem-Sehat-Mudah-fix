@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Post;
+use DB;
 
 class PostController extends Controller
 {
@@ -83,5 +85,25 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function search()
+    {
+    $key = Input::get('keyword');
+    if($key != ""){
+        $thread= DB::table('thread')->where('judulThread','LIKE','%' . $key . '%')
+            ->get();
+        if(count($thread) > 0)
+            return view('pages.search')->withDetails($thread)->withQuery($key);
+    }
+    return view('pages.search')->withMessage('Tidak Ada Thread Ditemukan')->withQuery($key);
+    }
+    
+    public function searchDetail($idThread){
+        $thread = DB::table('thread')->where('idThread','LIKE','%' . $idThread . '%')
+            ->get();
+//        $pantat = [$thread, $kategori];
+        if(count($thread) > 0)
+            return view('pages.search2')->withDetails($thread);
     }
 }
