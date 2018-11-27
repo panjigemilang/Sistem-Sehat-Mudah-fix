@@ -1,6 +1,32 @@
 <!DOCTYPE HTML>
 @extends('layouts/baseTamplate')
 @section('content')
+
+<?php
+    session_start();
+
+    $username = "admin"; //tolong ganti acuan session untuk login / arahkan pencocokan ke database
+    $password = "pw123"; //tolong ganti acuan session untuk login / arahkan pencocokan ke database
+
+    $error = "";
+
+    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+        $error = "success";
+        header('Location: /'); //tolong ubah direktori page setelah login berhasil
+    } 
+        
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        if ($_POST['username'] == $username && $_POST['password'] == $password) {
+            $_SESSION['loggedIn'] = true;
+            header('Location: /'); //tolong ubah direktori page setelah login berhasil
+        } 
+        else {
+            $_SESSION['loggedIn'] = false;
+            $error = "Invalid username and password!";
+        }
+    }
+?>
+
 <html>
     <head>
         <title>Login Page</title>
@@ -9,10 +35,8 @@
     <body>
         <div class="loginbox">
             <h1>Login here</h1>
-        
-        <!-- form untuk login -->
-        <form method="post" action="hallogin.php">
 
+        <form method="post" action="/login">
             <label for="username">Username:</label><br/>
             <input type="textlogin" placeholder="Enter username" required name="username" id="username"><br/>
       
@@ -21,8 +45,7 @@
       
             <input type="submit" value="Log In">
         </form>
-		<p>Don't have an account? Click<a href="#<insert_register_page.php>"> here </a>to create new account</p>
-        
+		<p>Don't have an account? Click<a href="/register"> here </a>to create new account</p>
     </body>
 </html>
 @endsection
