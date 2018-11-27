@@ -94,16 +94,19 @@ class PostController extends Controller
         $thread= DB::table('thread')->where('judulThread','LIKE','%' . $key . '%')
             ->get();
         if(count($thread) > 0)
-            return view('pages.search')->withDetails($thread)->withQuery($key);
+            return view('pages.search')->withThread($thread)->withQuery($key);
     }
     return view('pages.search')->withMessage('Tidak Ada Thread Ditemukan')->withQuery($key);
     }
     
-    public function searchDetail($idThread){
-        $thread = DB::table('thread')->where('idThread','LIKE','%' . $idThread . '%')
-            ->get();
+    public function searchDetail($idThread,$kategori){
+        $key = Input::get('keyword');
+        $thread = DB::table('thread')->where('idThread','LIKE','%' . $idThread . '%')->get();
+        
+        $terkait = DB::table('thread')->where('kategori','LIKE','%' . $kategori . '%')->where('idThread','!=',$idThread)->get();
+        
 //        $pantat = [$thread, $kategori];
         if(count($thread) > 0)
-            return view('pages.search2')->withDetails($thread);
+            return view('pages.search2')->withThread($thread)->withTerkait($terkait);
     }
 }

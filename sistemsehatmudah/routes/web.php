@@ -25,6 +25,10 @@ Route::get('/index', function(){
 
 Route::get('/search', 'PostController@search');
 
-Route::get('/search={idThread}', 'PostController@searchDetail');
+Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
+
+Route::get('/login', function(){
+    return view('pages/hallogin');
+});
 
 Route::resource('posts', 'PostController');

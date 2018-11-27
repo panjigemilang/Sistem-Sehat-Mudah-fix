@@ -7,10 +7,10 @@
     </head>
     
     <div class="search-page">
-        @if(isset($details))
+        @if(isset($thread))
         <h4 style="color:white;">hasil pencarian ' <i><b style="color:white;">{{$query}}</b></i> '</h4>
         <div class="row">
-            @foreach($details as $thread)
+            @foreach($thread as $thread)
             <div class="col-lg-4 col-md-6 search-card space-card">
                 <div class="ui stackable cards">
                     <div class="card card-faris">
@@ -18,7 +18,7 @@
                         <h1>{{$thread->judulThread}}</h1>
                         <p>{{$thread->kategori}}</p>
                         <p>{{$thread->createdTime}}</p>
-                        <a href="{{ url('/search=' . $thread->idThread) }}">
+                        <a href="{{ url('/search=' . $thread->idThread.'+'. $thread->kategori ) }}">
                             <btn class=" btn-search">Read</btn>
                         </a>
                     </div>
