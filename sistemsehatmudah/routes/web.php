@@ -31,4 +31,8 @@ Route::get('/login', function(){
     return view('pages/hallogin');
 });
 
+Route::get('/register', function(){
+    return view('pages/register');
+});
+
 Route::resource('posts', 'PostController');
