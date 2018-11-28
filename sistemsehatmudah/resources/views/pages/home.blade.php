@@ -1,9 +1,11 @@
-@extends('layouts.baseTemplate')
+@extends('layouts.baseTamplate')
 @section('content')
 <!--    CONTENT-->
 
 <body>
 
+<!--    HALO INI FIKRI NYOBA GANTI-->
+    
     <!--    SECTION 1 - FORM-->
     <section>
         <div class="main-page">

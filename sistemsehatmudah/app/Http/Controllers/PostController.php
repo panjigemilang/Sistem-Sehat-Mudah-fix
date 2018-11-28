@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\thread;
+use App\Post;
 use DB;
 
 class PostController extends Controller
