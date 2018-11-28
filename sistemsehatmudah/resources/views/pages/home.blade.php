@@ -95,8 +95,8 @@
             <div class="col-lg-7 col-md-7 col-sm-12">
                 <h1 id="ht">New Thread</h1>
                 <div class="thread">
-                    <div id="thread_box">
-                        
+                    <div id="ui stackable cards">
+                        <h1>halo</h1>
                     </div>
                 </div>
             </div>

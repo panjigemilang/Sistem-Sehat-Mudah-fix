@@ -23,8 +23,11 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
-Route::get('/profile', function(){
-    return view('pages/profile');
+Route::get('/profile', 'PostController@show');
+
+Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
+ Route::get('/login', function(){
+    return view('pages/hallogin');
 });
 
 Route::resource('posts', 'PostController');
