@@ -2,8 +2,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use App\Post;
+use App\thread;
 use DB;
+
 class PostController extends Controller
 {
     /**
@@ -14,8 +15,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        return Schema::getColumnListing('namaDokter');
-        // return view('pages.home')->with('thread', $thread);
+        $test = DB::table('thread')->get();
+        return $test;
     }
     /**
      * Show the form for creating a new resource.

@@ -12,11 +12,15 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="biru">
+                    @if(isset($details))
+                    @foreach($details as $profile)
                     <img src="/public/gambar/Screenshot_3.png" class="img-fluid" id="pp">
                     <br>
-                    <h1 class="sm-txt" id="name">Jukadi Mukidi</h1>
+                    <h1 class="sm-txt" id="name">{{$profile->namaDokter}}</h1>
                     <h2 class="sm-txt" id="name">About Me</h2>
-                    <h1 style="color: white; font-weight: bolder" class="sm-txt">Posts : </h1>
+                    <h1 style="color: white; font-weight: bolder" class="sm-txt">Posts : {{count($profile->idDokter)}}</h1>
+                    @endforeach
+                    @endif
                 </div>
             </div>
         </div>

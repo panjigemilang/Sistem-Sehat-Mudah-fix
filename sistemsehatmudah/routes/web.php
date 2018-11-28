@@ -23,6 +23,8 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
+Route::get('/coba', 'PostController@index');
+
 Route::get('/profile', 'PostController@show');
 
 Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');

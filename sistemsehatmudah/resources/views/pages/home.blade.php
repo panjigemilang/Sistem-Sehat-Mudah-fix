@@ -50,22 +50,21 @@
             </div>
         </div>
         <div class="row thread_box">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                
-                <h1>{{$thread->judul}}</h1>
+            @if (isset($thread))  
+            @foreach ($thread as $thread)   
+            <div class="col-lg-6 col-md-6 col-sm-6">                  
+                <h1>{{$thread->judulThread}}</h1>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
-                
-
                 <div class="desc">
-                    <h3>Deksripsi</h3>
+                    <h3>{{$thread->deskripsiThread}}</h3>
                 </div>
                 <div class="cat">
-                    <h4>Kategori</h4>
+                    <h4>{{$thread->kategori}}</h4>
                 </div>
             </div>
-            
-
+            @endforeach                
+            @endif                     
         </div>
         <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-12">
