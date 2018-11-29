@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     // Tabble name
-    protected $table = 'dokter';
+    protected $table = 'thread';
 
     // PK
-    protected $pk = 'id';
+    // protected $pk = 'id';
 
     //Timestamps
 }

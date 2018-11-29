@@ -21,16 +21,17 @@ Route::get('/index', function(){
     return view('pages/index');
 });
 
-Route::get('/search', 'PostController@search');
+Route::get('/coba', 'PostController@index');
+
+Route::get('/profile', 'PostController@show');
 
 Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
-
-Route::get('/login', function(){
+ Route::get('/login', function(){
     return view('pages/hallogin');
 });
 
-Route::get('/register', function(){
-    return view('pages/register');
+Route::get('/newThread', function(){
+    return view('pages/newThread');
 });
 
 Route::resource('posts', 'PostController');

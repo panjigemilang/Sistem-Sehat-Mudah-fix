@@ -58,6 +58,11 @@ form.form-inline input.form-control {
 
 /*END OF NAVBAR*/
 
+
+
+
+
+
 /*SECTION*/
 
 .main-page {
@@ -118,6 +123,12 @@ form.form-inline input.form-control {
     margin: 0 2rem;
 }
 
+input[type=text],
+input[type=email] {
+    border-radius: 20px;
+    box-shadow: 2px 2px #9498fa;
+}
+
 /*END OF FORM-COVER*/
 
 /*SECTION 2*/
@@ -150,6 +161,12 @@ section#sec2 h1#ht {
     bottom: 0;
 }
 
+.desc {}
+
+.cat {
+    /*    float: right;*/
+}
+
 .cat h4 {
     position: absolute;
     bottom: 0;
@@ -176,8 +193,8 @@ section#sec2 h1#ht {
     margin: 0 2rem;
 }
 
-input[type=text].form-control,
-input[type=email].form-control {
+input[type=text],
+input[type=email] {
     background-color: white;
     border-radius: 20px;
     border: 1px solid #babef0;
@@ -192,11 +209,78 @@ input[type=email].form-control {
 
 .thread {
     background-color: aqua;
-    height: 100px;
+/*    height: 100px;*/
     width: 82%;
     border-radius: 20px;
     box-shadow: 7px 7px black;
+    margin-bottom: 5vh;
+    padding: 1vh 0;
 }
+
+/*CARD CAROUSESL*/
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+
+/*END OF CARD*/
 
 /*END OF SECTION 2*/
 

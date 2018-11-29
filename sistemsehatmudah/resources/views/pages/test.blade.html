@@ -1,103 +1,54 @@
+@extends('layouts.baseTemplate')
+@section('content')
+
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>
         Sistem Sehat Mudah
     </title>
     <link type="text/css" rel="stylesheet" href="/public/css/app.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/home.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/newThreadDummy.css">
 </head>
+<!--    CONTENT-->
 
 <body>
-    <!--    NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="margin: 2vh">
-        <div class="col">
-            <a href="/"> <img class="img-fluid" src="/resources/gambar/LogoSSMFix.png" width="100vh">
-                <span>Sistem Sehat Mudah</span>
-            </a>
-        </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!--    SECTION 1 - FORM-->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0 col">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" size="44vh">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--    END OF NAVBAR-->
-
-    <!--    CONTENT-->
-<body>
-    <section>
-        <div class="main-page">
-            <div class="row">
-                <div id="join-us" class="col-lg-6">
-                        <h1 class="display-1" style="color: white;">Join Us!</h1>
-                        <h2 id="description">To get more <span>information</span> and <span> updated notification.</span> You <span> can also ask </span>your favorite <span>doctor</span> about your disease</h2>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="form-cover">
-                        <form id="form-register">
-                            <div class="form-group">
-                                <label class="label-form">First Name</label>
-    <input type="text" class="form-control" id="fname" placeholder="Enter First name">
-                            </div>
-                            <div class="form-group">
-                                <label class="label-form">Last Name</label>
-    <input type="text" class="form-control" id="lname" placeholder="Enter Last Name">
-                            </div>
-                            <div class="form-group">
-                                <label class="label-form">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-success btn-lg">Subscribe!</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    <section class="container card card-block bg-faded">
+        <form >
+<!--            TITLE-->
+            <div class="form-group">
+                <br>
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Title">
             </div>
-        </div>
+            
+<!--            DESC-->
+            <div class="form-group">
+                <label for="description">Description</label>
+                <br>
+                <input type="hidden" value="description">
+                <textarea rows="4" cols="100" name="comment" form="usrform" ></textarea>
+            </div>
+            
+<!--            PICTURE-->
+            <div class="form-group">
+                <label for="image">Choose File for Image</label>
+                <br>
+                <input type="file" id="file" value="file">
+            </div>
+            
+<!--            SUBMIT-->
+            <div class="form-group">
+                <button class="btn btn-info btn-lg">Submit</button>
+            </div>
+        </form>
     </section>
-</body>
-    <!--    END OF CONTENT-->
 
-    <!--    FOOTER-->
-    <footer>
-        <div class="row">
-            <div class="item1 col">
-                <span>About us</span>
-            </div>
-            <div class="item2 col">
-                <span>Services</span>
-            </div>
-            <div class="item3 col outer">
-                <div class="gambar">
-                    <div class="logo">Sistem Sehat Mudah</div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--    END OF FOOTER-->
-    <script src="/public/js/jquery3-3-1.js"></script>
-    <script>
-        $(window).ready(function() {
-//            alert("tomete");
-        });
+    {{-- END OF SECTION 1 --}}
 
-    </script>
 </body>
+
+<!--    END OF CONTENT-->
+@endsection

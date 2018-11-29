@@ -1,9 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use App\thread;
 use App\Post;
 use DB;
 
@@ -20,7 +19,6 @@ class PostController extends Controller
         $thread=DB::table('thread')->get();
         return view('pages/home')->withThread($thread);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -30,7 +28,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -41,7 +38,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -52,7 +48,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -63,7 +58,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -75,7 +69,6 @@ class PostController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

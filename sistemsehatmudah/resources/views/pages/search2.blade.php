@@ -27,7 +27,7 @@
                     <h5>{{$terkait->judulThread}}</h5>
                     <h7>{{$terkait->createdTime}}</h7>
                     <a href="{{ url('/search=' . $terkait->idThread.'+'. $thread->kategori ) }}">
-                    <button type="button" class="btn">Read</button>
+                    <button type="button" class="btn">read</button>
                     </a>
                     @endforeach
                     @endif

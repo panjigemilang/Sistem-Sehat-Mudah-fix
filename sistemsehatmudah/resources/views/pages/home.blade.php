@@ -18,12 +18,12 @@
     <section>
         <div class="main-page">
             <div class="row">
-                <div id="join-us" class="col-lg-6">
+                <div id="join-us" class="col-lg-6 col-md-12 col-sm-12">
                     <h1 class="display-1" style="color: white;">Join Us!</h1>
-                    <h2 id="description">To get more <span>information</span> and <span> updated notification.</span> You <span> can also ask </span>your favorite <span>doctor</span> about your disease</h2>
+                    <h2 id="description">To get more <span>information</span> and <span> updated notification.</span> You <span> can also ask<br> </span>your favorite <span>doctor</span> about your disease</h2>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="form-cover">
                         <form id="form-register">
                             <div class="form-group">
