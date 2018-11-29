@@ -17,8 +17,8 @@ class PostController extends Controller
     public function index()
     {
         //
-        return Schema::getColumnListing('namaDokter');
-        // return view('pages.home')->with('thread', $thread);
+        $thread=DB::table('thread')->get();
+        return view('pages/home')->withThread($thread);
     }
 
     /**
@@ -104,7 +104,6 @@ class PostController extends Controller
         $thread = DB::table('thread')->where('idThread','LIKE','%' . $idThread . '%')->get();
         
         $terkait = DB::table('thread')->where('kategori','LIKE','%' . $kategori . '%')->where('idThread','!=',$idThread)->get();
-        
 //        $pantat = [$thread, $kategori];
         if(count($thread) > 0)
             return view('pages.search2')->withThread($thread)->withTerkait($terkait);
