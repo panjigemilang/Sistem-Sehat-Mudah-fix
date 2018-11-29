@@ -118,12 +118,6 @@ form.form-inline input.form-control {
     margin: 0 2rem;
 }
 
-input[type=text],
-input[type=email] {
-    border-radius: 20px;
-    box-shadow: 2px 2px #9498fa;
-}
-
 /*END OF FORM-COVER*/
 
 /*SECTION 2*/
@@ -182,8 +176,8 @@ section#sec2 h1#ht {
     margin: 0 2rem;
 }
 
-input[type=text],
-input[type=email] {
+input[type=text].form-control,
+input[type=email].form-control {
     background-color: white;
     border-radius: 20px;
     border: 1px solid #babef0;

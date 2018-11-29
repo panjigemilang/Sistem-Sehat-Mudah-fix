@@ -32,4 +32,8 @@ Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
     return view('pages/hallogin');
 });
 
+Route::get('/newThread', function(){
+    return view('pages/newThread');
+});
+
 Route::resource('posts', 'PostController');

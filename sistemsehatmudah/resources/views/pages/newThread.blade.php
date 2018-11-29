@@ -1,42 +1,39 @@
-@extends('layouts.baseTemplate')
+@extends('layouts.baseTamplate')
 @section('content')
 
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>
-        Sistem Sehat Mudah
-    </title>
-    <link type="text/css" rel="stylesheet" href="/public/css/app.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/newThreadDummy.css">
+    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/newThread.css') }}">
 </head>
 <!--    CONTENT-->
 
 <body>
 
     <!--    SECTION 1 - FORM-->
-
+<br>
     <section class="container card card-block bg-faded">
-        <form >
+        <form action="/newThread" method="POST">
+            
 <!--            TITLE-->
             <div class="form-group">
                 <br>
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Title">
+                <br>
+                <input type="text" id="title" placeholder="Title" name="title" required>
             </div>
             
 <!--            DESC-->
             <div class="form-group">
                 <label for="description">Description</label>
                 <br>
-                <input type="hidden" value="description">
-                <textarea rows="4" cols="100" name="comment" form="usrform" ></textarea>
+                <input type="hidden" name="description">
+                <textarea rows="4" cols="100" name="comment" form="userform" required ></textarea>
             </div>
             
 <!--            PICTURE-->
             <div class="form-group">
                 <label for="image">Choose File for Image</label>
                 <br>
-                <input type="file" id="file" value="file">
+                <input type="file" id="file" name="file" required>
             </div>
             
 <!--            SUBMIT-->
@@ -45,6 +42,7 @@
             </div>
         </form>
     </section>
+    <br>
 
     {{-- END OF SECTION 1 --}}
 
