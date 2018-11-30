@@ -17,7 +17,8 @@ class PostController extends Controller
     {
         //
         $test = DB::table('thread')->get();
-        return $test;
+        return view('pages/home')->with('thread', $test);
+        // return "halo kocak";
     }
     /**
      * Show the form for creating a new resource.

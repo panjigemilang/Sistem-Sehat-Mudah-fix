@@ -11,25 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
+Route::get('/', 'PostController@index');
 
-Route::get('/about', function(){
-    return view('pages/about');
-});
+// Route::get('/about', function(){
+//     return view('pages/about');
+// });
 
-Route::get('/index', function(){
-    return view('pages/index');
-});
+// Route::get('/index', function(){
+//     return view('pages/index');
+// });
 
-Route::get('/coba', 'PostController@index');
+// Route::get('/coba', 'PostController@index');
 
-Route::get('/profile', 'PostController@show');
+// Route::get('/profile', 'PostController@show');
 
-Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
- Route::get('/login', function(){
-    return view('pages/hallogin');
-});
+// Route::get('/search', 'PostController@search');
 
-Route::resource('posts', 'PostController');
+// Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
+
+//  Route::get('/login', function(){
+//     return view('pages/hallogin');
+// });
+
+// Route::get('/register', 'HomeController');
+
+// Route::resource('posts', 'PostController');

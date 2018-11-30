@@ -25,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 767.98px){
 
     footer .row .col span {
         font-size: 1.2rem;
@@ -34,10 +34,19 @@ body {
     .thread{
         margin: 0 auto;
     }
+
+    .card{
+        min-height: 26rem!important;
+    }
+
+    #join-us{
+        padding: 6rem 11rem;
+    }
 }
 
-/*NAVBAR*/
+@media (max-width: 1366.98px){
 
+/*NAVBAR*/
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #dcf4ff !important;
     margin: 0 !important;
@@ -62,18 +71,15 @@ form.form-inline input.form-control {
 
 .main-page {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../gambar/martin-brosy-758535-unsplash.jpg");
-    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
 }
 
-
-
 #join-us {
     font-family: 'gotham', 'serif';
     text-align: right;
-    padding: 10% 0px;
+    padding: 6rem 6rem;
     overflow: auto;
     color: rgb(163, 163, 163);
 }
@@ -88,11 +94,15 @@ form.form-inline input.form-control {
     color: white;
 }
 
+h2#description{
+    padding-left: 1rem;
+}
+
 /*FORM-COVER*/
 
 .form-cover {
     background-color: white;
-    box-shadow: 7px 7px #292929;
+    box-shadow: 7px 7px 10px black;
     text-align: center;
     margin: 4.5rem auto;
 /*    height: 75%;*/
@@ -128,6 +138,7 @@ input[type=email] {
 
 /*SECTION 2*/
 
+/* FEATURED THREAD */
 #sec2 {
     background-color: maroon;
 /*    height: 100%;*/
@@ -142,7 +153,7 @@ section#sec2 h1#ht {
 
 .thread_box {
     background-color: white;
-    box-shadow: 7px 7px #292929;
+    box-shadow: 7px 7px 10px black;
     /*    text-align: center;*/
     margin: 1.5rem auto 2rem auto;
     padding: 3rem;
@@ -165,7 +176,7 @@ section#sec2 h1#ht {
 
 #bmi {
     background-color: white;
-    box-shadow: 7px 7px #292929;
+    box-shadow: 7px 7px 10px #292929;
     margin: 0 auto;
 /*    height: 100%;*/
     width: 50%;
@@ -196,12 +207,19 @@ input[type=email] {
 }
 /*END of BMI*/
 
+/* NEW THREAD */
 .thread {
     background-color: aqua;
-    height: 100px;
     width: 82%;
     border-radius: 20px;
-    box-shadow: 7px 7px black;
+    box-shadow: 7px 7px 10px black;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+
+.card{
+    border-radius: 1.25rem!important;
+    min-height: 24rem!important;
 }
 
 /*END OF SECTION 2*/
@@ -270,4 +288,5 @@ footer .row .col .logo {
 /*    position: absolute;*/
 /*    top: 50%;*/
 /*    transform: translateY(-50%);*/
+}
 }
