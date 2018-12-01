@@ -5,7 +5,11 @@
     <head>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/search.css') }}">
     </head>
-    
+    @if (session('alert')==null)
+    <script>
+    alert("Data Disimpan ke Database!!");
+    </script>
+    @endif
     <div class="search-page">
         @if(isset($thread))
         <h4 style="color:white;">hasil pencarian ' <i><b style="color:white;">{{$query}}</b></i> '</h4>

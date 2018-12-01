@@ -15,27 +15,27 @@
 
 <!--            TITLE-->
             {{ csrf_field() }}
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <br>
                 <label for="judul">Judul</label>
                 <br>
                 <input type="text" name="judul" id="title" placeholder="judul" required>
-            </div>
+            </div> -->
 
 <!--            KATAGORI-->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="kategori">Kategori</label>
                 <br>
                 <input type="text" name="kategori" id="title" placeholder="kategori" required>
-            </div>
+            </div> -->
 
 <!--            DESC -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="description">Description</label>
                 <br>
                 <input type="text" name="deskripsi" id="title" placeholder="Deskripsi" required>
             </div>
-            
+             -->
 <!--            PICTURE-->
             <div class="form-group" enctype="multipart/form-data">
                 <label for="image">Choose File for Image</label>

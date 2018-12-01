@@ -106,8 +106,8 @@ class PostController extends Controller
         $kategori = Input::POST('kategori');
         $deskripsi=$request->input('deskripsi');
         $gambar = Input::POST('file');
-        $data = array('judulThread'=>$judul,'kategori'=>$kategori,'deskripsiThread'=>$deskripsi);
-        DB::table('thread')->insert($data);
+        // $data = array('judulThread'=>$judul,'kategori'=>$kategori,'deskripsiThread'=>$deskripsi);
+        // DB::table('thread')->insert($data);
         $this->validate($request, [
             'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);    
@@ -117,7 +117,8 @@ class PostController extends Controller
             $name = $image->getClientOriginalName();           
             $destinationPath = public_path("gambar");
             $image->move($destinationPath, $name);
-            echo('berhasil');
+            
+            return view('pages.search')->with('alert','berhasil');
         }else{
         echo('gagal');
         } 
