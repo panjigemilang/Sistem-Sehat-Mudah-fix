@@ -101,4 +101,25 @@ class PostController extends Controller
         if(count($thread) > 0)
             return view('pages.search2')->withThread($thread)->withTerkait($terkait);
     }
-}
+    public function newThread(Request $request){
+        $judul = Input::POST('judul');
+        $kategori = Input::POST('kategori');
+        $deskripsi=$request->input('deskripsi');
+        $gambar = Input::POST('file');
+        $data = array('judulThread'=>$judul,'kategori'=>$kategori,'deskripsiThread'=>$deskripsi);
+        DB::table('thread')->insert($data);
+        $this->validate($request, [
+            'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);    
+        if  ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $ext = $image->getClientOriginalExtension();
+            $name = $image->getClientOriginalName();           
+            $destinationPath = public_path("gambar");
+            $image->move($destinationPath, $name);
+            echo('berhasil');
+        }else{
+        echo('gagal');
+        } 
+    }
+}    

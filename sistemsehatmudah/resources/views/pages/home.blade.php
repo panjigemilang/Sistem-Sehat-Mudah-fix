@@ -8,7 +8,6 @@
     </title>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/home.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/stylenew.css') }}">
 </head>
 <!-- CONTENT-->
 
@@ -174,3 +173,4 @@
                                                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                                 </div>
+                                                @endsection
