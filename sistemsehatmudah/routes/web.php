@@ -40,3 +40,9 @@ Route::get('/newThread', function(){
 });
 
 Route::POST('/bisa', 'PostController@newThread');
+
+Route::get('/sistemlogin', function(){
+    return view('pages/sistemlogin');
+});
+
+Route::resource('posts', 'PostController');
