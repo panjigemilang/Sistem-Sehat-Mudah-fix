@@ -11,7 +11,8 @@
         <div class="loginbox">
             <h1>Login here</h1>
 
-        <form method="post" action="/sistemlogin">
+        <form method="post" action="{{action('PostController@sistemlogin')}}">
+        	{{ csrf_field() }}
             <label for="username">Username:</label><br/>
             <input type="textlogin" placeholder="Enter username" required name="username" id="username"><br/>
       

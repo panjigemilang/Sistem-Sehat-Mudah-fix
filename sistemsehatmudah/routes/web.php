@@ -37,8 +37,6 @@ Route::get('/newThread', function(){
     return view('pages/newThread');
 });
 
-Route::get('/sistemlogin', function(){
-    return view('pages/sistemlogin');
-});
+Route::post('/', 'PostController@sistemlogin');
 
 Route::resource('posts', 'PostController');
