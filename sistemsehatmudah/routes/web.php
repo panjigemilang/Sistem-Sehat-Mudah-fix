@@ -25,9 +25,11 @@ Route::get('/', 'PostController@index');
 
 // Route::get('/profile', 'PostController@show');
 
-// Route::get('/search', 'PostController@search');
+Route::get('/kategori', 'PostController@search');
 
-// Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
+Route::get('/search', 'PostController@search');
+
+ Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
 
 //  Route::get('/login', function(){
 //     return view('pages/hallogin');

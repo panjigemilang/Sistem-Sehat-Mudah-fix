@@ -14,12 +14,12 @@
             <div class="col-lg-4 col-md-6 search-card space-card">
                 <div class="ui stackable cards">
                     <div class="card card-faris">
-                        <img src="{{ URL::asset('gambar/'. $thread->idThread .'.jpg' )}}" width="100%" height="160vh" id="gmbr">
+                        <img src="{{ URL::asset('gambar/'. $thread->idThread .'.jpg' )}}" width="100%" height="160vh" id="gmbr" style="border-radius: inherit;">
                         <h1>{{$thread->judulThread}}</h1>
                         <p>{{$thread->kategori}}</p>
                         <p>{{$thread->createdTime}}</p>
                         <a href="{{ url('/search=' . $thread->idThread.'+'. $thread->kategori ) }}">
-                            <btn class=" btn-search">Read</btn>
+                            <button class="btn btn-default btn-search">Read</button>
                         </a>
                     </div>
                 </div>

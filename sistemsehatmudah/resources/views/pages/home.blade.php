@@ -50,18 +50,28 @@
     {{-- SECTION 2 --}}
     <section id="sec2">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="container">
-                    <h1 id="ht">Featured Thread</h1>
+     <div class="col-lg-12 col-md-12 col-sm-12">
+        <h1 id="ht" style="margin: 0 10rem;">Featured Thread</h1>
+            <div class="thread_box row">                   
+                    @foreach ($fthread as $fthread)
+                <div class="col-lg-8 col-md-12 col-sm-12 featured-img" style="
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ URL::asset('gambar/'.$fthread->idThread.'.jpg')}});">
+                  <h1 class="featured-text">{{$fthread->judulThread}}</h1>
                 </div>
-            </div>
-     <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="new-thread">
-                <h1>Judul Thread</h1>
-                <h3>Deskripsi</h3>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="cat">
+                    <h3 class="featured-text" id="desc">{{$fthread->deskripsiThread}}</h3><a href="{{url('/search='.$fthread->idThread.'+'.$fthread->kategori)}}">Read More</a>
+                    <form method="get" action="search">                        
+                    <small class="featured-text"><input type="submit" name="keyword" value="{{$fthread->kategori}}" class="submit-cat"></small>
+                    </form>
+                    @endforeach
+                    </div>
+                </div>
             </div>
          </div>
                 </div>
+
+                {{-- BMI --}}
                     <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-5">
                             <h1 id="ht" style="text-align: center;">Hitung BMI</h1>
@@ -87,6 +97,7 @@
                                 </form>
                             </div>
                         </div>
+                        
                         <div class="col-lg-7 col-md-7 col-sm-7">
                             <h1 id="ht">New Thread</h1>
 
@@ -100,8 +111,10 @@
                                                 <img class="card-img-top" src="{{ URL::asset('gambar/'.$item->idThread.'.jpg') }}" alt="Card image cap" width= "100px" height="100px" style="object-fit: cover; border-radius: inherit;">
                                                 <div class="card-body">
                                                     <h4 class="card-title">{{$item->judulThread}}</h4>
-                                                    <p class="card-text" id="desc">{{$item->deskripsiThread}}</p><a href="/">Read More</a>
-                                                    <p class="card-text" style="text-align: right;"><small class="text-muted">{{$item->kategori}} </small></p>
+                                                    <p class="card-text" id="desc">{{$item->deskripsiThread}}</p><a href="{{url('/search='.$item->idThread.'+'.$item->kategori)}}">Read More</a>
+                                                    <form method="get" action="search">                                                            
+                                                <p class="card-text" style="text-align: right;"><small class="text-muted"><input type="submit" name="keyword" value="{{$item->kategori}}" class="submit-cat"></small></p>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
