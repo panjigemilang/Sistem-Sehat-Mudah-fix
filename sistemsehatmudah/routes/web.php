@@ -29,11 +29,15 @@ Route::get('/kategori', 'PostController@search');
 
 Route::get('/search', 'PostController@search');
 
- Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
+Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
 
-//  Route::get('/login', function(){
-//     return view('pages/hallogin');
-// });
+Route::get('/login', function(){
+    return view('pages/hallogin');
+});
+
+Route::get('/newThread', function(){
+    return view('pages/newThread');
+});
 
 // Route::get('/register', 'HomeController');
 
