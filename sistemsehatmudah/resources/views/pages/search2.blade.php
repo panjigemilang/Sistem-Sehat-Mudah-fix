@@ -9,8 +9,11 @@
             @if(isset($thread))
             @foreach($thread as $thread)
             <div class="row">
-                <div class="col-lg-8 col-md-12">
-                    <h2>{{$thread->judulThread}}</h2>
+                <div class="col-lg-8 col-md-12" style="border-right: 1px solid rgb(211, 202, 202);">
+                    <a href="{{ url('/profile=' . $thread->kategori ) }}" style="text-decoration: none;">
+                <img src="{{URL::asset('gambar/'.$thread->kategori.'.jpg')}}" style="object-fit: cover; float: left; margin: 0 12px 15px;" class="rounded-circle" height="80px" width="80px">
+                    </a>
+                    <h2 style="font-weight: bolder;">{{$thread->judulThread}}</h2>
                     <h5>{{$thread->kategori}}</h5>
                     <h5 style="color: black;">{{$thread->createdTime}}</h5>
                     <img src="{{URL::asset('gambar/'. $thread->idThread .'.jpg')}}" style="height:60vh; width:100%; object-fit: cover">
@@ -19,18 +22,22 @@
                 @endforeach
                 @endif
                 <div class="col-lg-4 col-md-12">
-                    <h5>Thread Terkait</h5>
+                    <h4 style="font-weight: bolder;">Thread Terkait</h4>
+                    <div class="row">
                     @if(isset($terkait))
-                    @foreach($terkait as $terkait)
-                    <hr>
-                    <img src="{{ URL::asset('gambar/'. $terkait->idThread .'.jpg' )}}" width="80px" id="gmbr">
-                    <h5>{{$terkait->judulThread}}</h5>
-                    <h7>{{$terkait->createdTime}}</h7>
+                    @foreach($terkait as $terkait)                    
+                    <div class="col-lg-12 col-md-3 col-sm-6" style="text-align: center;">
+                            <hr>
+                    <img src="{{ URL::asset('gambar/'. $terkait->idThread .'.jpg' )}}" width="160px" id="gmbr">
+                    <h4 style="font-weight: bolder;">{{$terkait->judulThread}}</h4>
+                    <h5>{{$terkait->createdTime}}</h5>
                     <a href="{{ url('/search=' . $terkait->idThread.'+'. $thread->kategori ) }}">
                     <button type="button" class="btn">read</button>
                     </a>
+                    </div>
                     @endforeach
                     @endif
+                    </div>
                 </div>
             </div>
         </div>

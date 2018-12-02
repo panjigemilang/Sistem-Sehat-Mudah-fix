@@ -12,9 +12,8 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="biru">
-                    @if(isset($details))
-                    @foreach($details as $profile)
-                    <img src="/public/gambar/Screenshot_3.png" class="img-fluid" id="pp">
+                    @foreach($profile as $profile)
+                <img src="{{URL::asset('gambar/'.$profile->kategori.'.jpg')}}" class="img-fluid" id="pp">
                     <br>
                     <h1 class="sm-txt" id="name">{{$profile->namaDokter}}</h1>
                     <h2 class="sm-txt" id="name">About Me</h2>

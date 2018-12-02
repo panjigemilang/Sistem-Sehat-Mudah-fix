@@ -52,6 +52,8 @@ button:hover, a:hover {
 
 .deskripsi{
     text-align: justify;
+    margin: 1rem;
+    font-size: 16px;
 }
 
 .bg{
