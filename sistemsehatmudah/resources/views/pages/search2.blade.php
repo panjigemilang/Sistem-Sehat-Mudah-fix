@@ -10,7 +10,9 @@
             @foreach($thread as $thread)
             <div class="row">
                 <div class="col-lg-8 col-md-12" style="border-right: 1px solid rgb(211, 202, 202);">
+                    <a href="{{ url('/profile=' . $thread->kategori ) }}" style="text-decoration: none;">
                 <img src="{{URL::asset('gambar/'.$thread->kategori.'.jpg')}}" style="object-fit: cover; float: left; margin: 0 12px 15px;" class="rounded-circle" height="80px" width="80px">
+                    </a>
                     <h2 style="font-weight: bolder;">{{$thread->judulThread}}</h2>
                     <h5>{{$thread->kategori}}</h5>
                     <h5 style="color: black;">{{$thread->createdTime}}</h5>

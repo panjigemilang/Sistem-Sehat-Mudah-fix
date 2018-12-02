@@ -23,7 +23,7 @@ Route::get('/', 'PostController@index');
 
 // Route::get('/coba', 'PostController@index');
 
-// Route::get('/profile', 'PostController@show');
+Route::get('/profile={idthread}', 'PostController@show');
 
 Route::get('/kategori', 'PostController@search');
 

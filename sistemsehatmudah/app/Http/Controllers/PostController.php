@@ -48,7 +48,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $db = DB::table('thread')->where('kategori', 'LIKE', $id)->get();        
+        return view('pages/profile')->with('profile', $db);
     }
     /**
      * Show the form for editing the specified resource.
