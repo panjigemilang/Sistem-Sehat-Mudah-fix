@@ -119,7 +119,9 @@ class PostController extends Controller
 	        echo '<script language="javascript">';
 			echo 'alert("Log in berhasil! Klik tombol OK untuk melanjutkan ke halaman home.")';
 			echo '</script>';
-	        return view('pages/home');
+	        $thread = DB::table('thread')->get();
+            $fthread = DB::table('thread')->inRandomOrder()->take(1)->get();
+            return view('pages/home')->with('thread', $thread)->with('fthread', $fthread);
 	    }
 	    else {
 	        $_SESSION['loggedIn'] = false;
