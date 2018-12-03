@@ -80,7 +80,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del = DB::table('dokter_has_thread')->where('idThread', '=', $id)->delete();
+        $delete = DB::table('thread')->where('idThread', '=', $id)->delete();
+        return $this->index();
     }
 
     public function search()

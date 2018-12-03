@@ -27,20 +27,20 @@
             </form>
 
             <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="/newThread">new thread</a>
+                        </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a> <!--href nya diubah sama himawan-->
+                    <a class="nav-link" href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!--    END OF NAVBAR-->
-
+    
    @yield('content')
 
-    <!--    FOOTER-->
+   <!--    FOOTER-->
     
 <footer>
         <div class="row">

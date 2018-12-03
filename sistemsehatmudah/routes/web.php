@@ -27,6 +27,8 @@ Route::get('/profile={idthread}', 'PostController@show');
 
 Route::get('/kategori', 'PostController@search');
 
+Route::get('/destroy={idthread}', 'PostController@destroy');
+
 Route::get('/search', 'PostController@search');
 
 Route::get('/search={idthread}+{kategori}', 'PostController@searchDetail');
