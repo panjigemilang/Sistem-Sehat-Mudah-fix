@@ -110,11 +110,10 @@ class PostController extends Controller
 
     public function sistemlogin(){
     	session_start();
+        
+        $dokter_found = DB::table('dokter')->select('username', 'password')->where('username','=',$_POST['username'])->where('password','=',$_POST['password'])->get();
 
-	    $username = "admin";
-	    $password = "pw123";
-	    
-	    if (isset($_POST['username']) && isset($_POST['password']) && $_POST['username'] == $username && $_POST['password'] == $password) {
+	    if (isset($_POST['username']) && isset($_POST['password']) && count($dokter_found) == 1) {
 	        $_SESSION['loggedIn'] = true;
 	        echo '<script language="javascript">';
 			echo 'alert("Log in berhasil! Klik tombol OK untuk melanjutkan ke halaman home.")';
@@ -130,5 +129,17 @@ class PostController extends Controller
 			echo '</script>';
 	        return view('pages/hallogin');
 	    }
+    }
+
+    public function logout(){
+        session_start();
+
+        if($_SESSION['loggedIn'] == true){
+            session_destroy();
+            echo '<script language="javascript">';
+            echo 'alert("Log Out Sukses!")';
+            echo '</script>';
+            return view('pages/hallogin');
+        }
     }
 }

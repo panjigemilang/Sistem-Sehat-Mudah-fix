@@ -47,6 +47,8 @@ Route::get('/newThread', function(){
 
 Route::post('', 'PostController@sistemlogin');
 
+Route::get('logout', 'PostController@logout');
+
 // Route::get('/register', 'HomeController');
 
 // Route::resource('posts', 'PostController');
