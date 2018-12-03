@@ -13,15 +13,7 @@
 
 Route::get('/', 'PostController@index');
 
-// Route::get('/about', function(){
-//     return view('pages/about');
-// });
-
-// Route::get('/index', function(){
-//     return view('pages/index');
-// });
-
-// Route::get('/coba', 'PostController@index');
+Route::get('/home', 'PostController@indexloggedin');
 
 Route::get('/profile={idthread}', 'PostController@show');
 
@@ -43,8 +35,4 @@ Route::get('/newThread', function(){
 
 Route::post('', 'PostController@sistemlogin');
 
-Route::get('logout', 'PostController@logout');
-
-// Route::get('/register', 'HomeController');
-
-// Route::resource('posts', 'PostController');
+Route::get('/logout', 'PostController@logout');

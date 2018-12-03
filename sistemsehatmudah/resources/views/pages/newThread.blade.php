@@ -1,4 +1,4 @@
-@extends('layouts.baseTamplate')
+@extends('layouts.userLogin')
 @section('content')
 
 <head>

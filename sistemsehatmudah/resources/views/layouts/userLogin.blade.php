@@ -10,7 +10,7 @@
     <!--    NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light row" style="margin: 2vh">
         <div class="col">
-            <a href="/"> <img class="img-fluid" src="{{ URL::asset('gambar/LogoSSMFix.png') }}" width="100vh">
+            <a href="/home"> <img class="img-fluid" src="{{ URL::asset('gambar/LogoSSMFix.png') }}" width="100vh">
                 <span>Sistem Sehat Mudah</span>
             </a>
         </div>
@@ -28,7 +28,7 @@
 
             <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                            <a class="nav-link" href="/newThread">new thread</a>
+                            <a class="nav-link" href="/newThread">New Thread</a>
                         </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a>

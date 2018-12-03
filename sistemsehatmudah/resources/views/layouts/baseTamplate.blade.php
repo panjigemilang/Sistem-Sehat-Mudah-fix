@@ -33,9 +33,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a> <!--href nya diubah sama himawan-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{action('PostController@logout')}}">Log Out</a>
-                </li>
             </ul>
         </div>
     </nav>

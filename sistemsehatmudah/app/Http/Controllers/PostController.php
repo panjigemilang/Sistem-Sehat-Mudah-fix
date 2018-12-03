@@ -122,7 +122,7 @@ class PostController extends Controller
 			echo '</script>';
 	        $thread = DB::table('thread')->get();
             $fthread = DB::table('thread')->inRandomOrder()->take(1)->get();
-            return view('pages/home')->with('thread', $thread)->with('fthread', $fthread);
+            return view('pages/userLogin')->with('thread', $thread)->with('fthread', $fthread);
 	    }
 	    else {
 	        $_SESSION['loggedIn'] = false;
@@ -139,9 +139,18 @@ class PostController extends Controller
         if($_SESSION['loggedIn'] == true){
             session_destroy();
             echo '<script language="javascript">';
-            echo 'alert("Log Out Sukses!")';
+            echo 'alert("Log out sukses!")';
             echo '</script>';
             return view('pages/hallogin');
         }
+    }
+
+    public function indexloggedin()
+    {
+        //
+        $thread = DB::table('thread')->get();
+        $fthread = DB::table('thread')->inRandomOrder()->take(1)->get();
+        return view('pages/userLogin')->with('thread', $thread)->with('fthread', $fthread);
+        // return "halo kocak";
     }
 }
