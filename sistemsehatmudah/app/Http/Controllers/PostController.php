@@ -147,10 +147,8 @@ class PostController extends Controller
 
     public function indexloggedin()
     {
-        //
         $thread = DB::table('thread')->get();
         $fthread = DB::table('thread')->inRandomOrder()->take(1)->get();
         return view('pages/userLogin')->with('thread', $thread)->with('fthread', $fthread);
-        // return "halo kocak";
     }
 }
