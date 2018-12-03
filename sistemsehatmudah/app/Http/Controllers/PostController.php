@@ -115,24 +115,22 @@ class PostController extends Controller
 
 	    $username = "admin";
 	    $password = "pw123";
-
-	    $error = "";
-
-	    if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
-	        $error = "success";
-	        return view('pages/home');
-	    } 
-	        
-	    if (isset($_POST['username']) && isset($_POST['password'])) {
-	        if ($_POST['username'] == $username && $_POST['password'] == $password) {
-	            $_SESSION['loggedIn'] = true;
-	            return view('pages/home');
-	        } 
-	        else {
-	            $_SESSION['loggedIn'] = false;
-	            $error = "Invalid username and password!";
-	            return view('pages/hallogin');
-	        }
+	    
+	    if (isset($_POST['username']) && isset($_POST['password']) && $_POST['username'] == $username && $_POST['password'] == $password) {
+	        $_SESSION['loggedIn'] = true;
+	        echo '<script language="javascript">';
+			echo 'alert("Log in berhasil! Klik tombol OK untuk melanjutkan ke halaman home.")';
+			echo '</script>';
+	        $thread = DB::table('thread')->get();
+            $fthread = DB::table('thread')->inRandomOrder()->take(1)->get();
+            return view('pages/home')->with('thread', $thread)->with('fthread', $fthread);
+	    }
+	    else {
+	        $_SESSION['loggedIn'] = false;
+	        echo '<script language="javascript">';
+			echo 'alert("Username atau password salah!")';
+			echo '</script>';
+	        return view('pages/hallogin');
 	    }
     }
 }

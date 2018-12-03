@@ -41,6 +41,8 @@ Route::get('/newThread', function(){
     return view('pages/newThread');
 });
 
+Route::post('', 'PostController@sistemlogin');
+
 // Route::get('/register', 'HomeController');
 
 // Route::resource('posts', 'PostController');
