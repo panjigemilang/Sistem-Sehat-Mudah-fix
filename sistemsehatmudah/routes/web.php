@@ -41,8 +41,12 @@ Route::get('/newThread', function(){
 
 Route::POST('/bisa', 'PostController@newThread');
 
-Route::get('/sistemlogin', function(){
-    return view('pages/sistemlogin');
-});
+// Route::get('/sistemlogin', function(){
+//     return view('pages/sistemlogin');
+// });
 
 Route::resource('posts', 'PostController');
+
+Route::POST('/bmi', 'PostController@bmi');
+
+Route::POST('/sistemlogin', 'PostController@sistemlogin');

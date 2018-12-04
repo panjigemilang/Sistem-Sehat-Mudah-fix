@@ -4,6 +4,11 @@
 
 <html>
     <head>
+    <script> 
+    @if(isset($Msg)) 
+        alert("data salah"); 
+    @endif 
+    </script>
         <title>Login Page</title>
         <link rel="stylesheet" type="text/css"  href="{{ URL::asset('css/stylenew.css') }}">
     </head>
@@ -11,7 +16,8 @@
         <div class="loginbox">
             <h1>Login here</h1>
 
-        <form method="post" action="/sistemlogin">
+        <form method="post" action="/sistemlogin" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <label for="username">Username:</label><br/>
             <input type="textlogin" placeholder="Enter username" required name="username" id="username"><br/>
       
